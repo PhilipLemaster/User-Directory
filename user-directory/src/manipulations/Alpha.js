@@ -1,5 +1,4 @@
 import React from 'react';
-import empArray from '../array';
 import EmpCard from '../components/EmpCard';
 
 function Alpha() {

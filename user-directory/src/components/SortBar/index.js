@@ -17,6 +17,7 @@ import { HashRouter, Switch, Route, Link } from 'react-router-dom';
 import Add from '../pages/Add';
 import Home from '../pages/Home';
 import Alpha from '../../manipulations/Alpha';
+import ManagerF from '../../manipulations/ManagerF';
 
 const SortBar = (props) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -53,7 +54,7 @@ const SortBar = (props) => {
                   </DropdownToggle>
                   <DropdownMenu right>
                     <DropdownItem>
-                      Managers
+                      <NavLink className='navLinks'><Link to={'/managerf'} className='nav-link' style={{color: 'black'}}>Managers</Link></NavLink>
                     </DropdownItem>
                     <DropdownItem>
                       Engineers
@@ -77,6 +78,9 @@ const SortBar = (props) => {
                 </Route>
                 <Route path="/alpha">
                     <Alpha />
+                </Route>
+                <Route path="/managerf">
+                    <ManagerF />
                 </Route>
             </Switch>
             
