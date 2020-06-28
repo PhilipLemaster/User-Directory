@@ -4,7 +4,7 @@ import empArray from '../../array';
 
 const Add = (props) => {
   return (
-    <Form>
+    <Form style={{maxWidth:'50%', position:'relative', left:'300px', top:''}}>
       <FormGroup>
         <Label for="full-name">Full Name</Label>
         <Input type="text" name="fullName" id="fullName" placeholder="Bjarne Stroustrup" />

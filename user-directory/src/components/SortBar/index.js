@@ -47,7 +47,7 @@ const SortBar = (props) => {
                       <NavLink className='navLinks'><Link to={'/alpha'} className='nav-link' style={{color: 'black'}}>Alphabetical</Link></NavLink>
                     </DropdownItem>
                     <DropdownItem>
-                      By ID
+                      <NavLink className='navLinks'><Link to={'/'} className='nav-link' style={{color: 'black'}}>By ID</Link></NavLink>
                     </DropdownItem>
                   </DropdownMenu>
                 </UncontrolledDropdown>
