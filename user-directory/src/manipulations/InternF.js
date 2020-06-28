@@ -1,20 +1,29 @@
 import React from 'react';
 import EmpCard from '../components/EmpCard';
+import empArray from '../array';
 
 function InternF() {
 
-    let empArray = JSON.parse(localStorage.getItem("employees"));
-    const manArray = empArray.filter(function(e) {
-        return e.title == 'Intern'
-    })
-       const empComponents = manArray.map(person => <EmpCard emp={person}/>)
-
-    return(
-        <div>
-            {empComponents}
-        </div>
+    if (empArray === null) {
+        return(
+            <div></div>
+        )
+    }
     
-    )
+    else {
+        const intArray = empArray.filter(function(e) {
+            return e.title === 'Intern'
+        })
+           const empComponents = intArray.map(person => <EmpCard emp={person}/>)
+    
+        return(
+            <div>
+                {empComponents}
+            </div>
+        
+        )
+    }
+    
 }
 
 export default InternF;
