@@ -1,0 +1,13 @@
+.wholeCard {
+    text-align: center;
+}
+
+.name {
+    font-family: 'Righteous', cursive;
+    font-size: 35px;
+}
+
+.email, .title {
+    font-family: 'Dosis', sans-serif;
+    font-size: 20px;
+}
