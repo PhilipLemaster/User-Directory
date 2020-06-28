@@ -9,9 +9,6 @@ function App() {
       <Router>
         <SortBar />
       </Router>
-      {/* <EmpCard emp={{name:'Philip', title:"Thug", email: "hello@gmail.com"}}/>
-      <EmpCard emp={{name:'Philip', title:"Thug", email: "hello@gmail.com"}}/>
-      <EmpCard emp={{name:'Philip', title:"Thug", email: "hello@gmail.com"}}/> */}
     </div>
   );
 }

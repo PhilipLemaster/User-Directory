@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import empArray from '../../array';
 
 const Add = (props) => {
   return (
@@ -31,14 +32,17 @@ function addEmp(res) {
   let fullName = document.getElementById('fullName').value;
   let title = document.getElementById('title').value;
   let email = document.getElementById('email').value;
-  
+
   const emp = {
     name: fullName,
     title: title,
     email: email
   }
-
-  console.log(emp)
+  
+  empArray.push(emp);
+  console.log(empArray);
+  localStorage.setItem("employees", JSON.stringify(empArray));
+  alert("Employee Added!");
 }
 
 export default Add;

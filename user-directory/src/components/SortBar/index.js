@@ -15,7 +15,6 @@ import {
 } from 'reactstrap';
 import { HashRouter, Switch, Route, Link } from 'react-router-dom';
 import Add from '../pages/Add';
-import Delete from '../pages/Delete';
 import Home from '../pages/Home';
 
 const SortBar = (props) => {
@@ -33,9 +32,6 @@ const SortBar = (props) => {
               <Nav className="mr-auto" navbar>
                 <NavItem>
                 <NavLink className='navLinks'><Link to={'/add'} className='nav-link'>Add</Link></NavLink>
-                </NavItem>
-                <NavItem>
-                <NavLink className='navLinks'><Link to={'/projects'} className='nav-link'>Delete</Link></NavLink>
                 </NavItem>
                 <UncontrolledDropdown nav inNavbar>
                   <DropdownToggle nav caret>
@@ -77,9 +73,6 @@ const SortBar = (props) => {
                 </Route>
                 <Route path="/add">
                     <Add />
-                </Route>
-                <Route path="/delete">
-                    <Delete />
                 </Route>
             </Switch>
             
