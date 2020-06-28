@@ -18,6 +18,9 @@ import Add from '../pages/Add';
 import Home from '../pages/Home';
 import Alpha from '../../manipulations/Alpha';
 import ManagerF from '../../manipulations/ManagerF';
+import EngineerF from '../../manipulations/EngineerF';
+import InternF from '../../manipulations/InternF';
+
 
 const SortBar = (props) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -57,10 +60,10 @@ const SortBar = (props) => {
                       <NavLink className='navLinks'><Link to={'/managerf'} className='nav-link' style={{color: 'black'}}>Managers</Link></NavLink>
                     </DropdownItem>
                     <DropdownItem>
-                      Engineers
+                      <NavLink className='navLinks'><Link to={'/engineerf'} className='nav-link' style={{color: 'black'}}>Engineers</Link></NavLink>
                     </DropdownItem>
                     <DropdownItem>
-                      Interns
+                      <NavLink className='navLinks'><Link to={'/internf'} className='nav-link' style={{color: 'black'}}>Interns</Link></NavLink>
                     </DropdownItem>
                   </DropdownMenu>
                 </UncontrolledDropdown>
@@ -81,6 +84,12 @@ const SortBar = (props) => {
                 </Route>
                 <Route path="/managerf">
                     <ManagerF />
+                </Route>
+                <Route path="/engineerf">
+                    <EngineerF />
+                </Route>
+                <Route path="/internf">
+                    <InternF />
                 </Route>
             </Switch>
             
