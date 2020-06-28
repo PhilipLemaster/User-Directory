@@ -16,6 +16,7 @@ import {
 import { HashRouter, Switch, Route, Link } from 'react-router-dom';
 import Add from '../pages/Add';
 import Home from '../pages/Home';
+import Alpha from '../../manipulations/Alpha';
 
 const SortBar = (props) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -31,7 +32,7 @@ const SortBar = (props) => {
             <Collapse isOpen={isOpen} navbar>
               <Nav className="mr-auto" navbar>
                 <NavItem>
-                <NavLink className='navLinks'><Link to={'/add'} className='nav-link'>Add</Link></NavLink>
+                  <NavLink className='navLinks'><Link to={'/add'} className='nav-link'>Add</Link></NavLink>
                 </NavItem>
                 <UncontrolledDropdown nav inNavbar>
                   <DropdownToggle nav caret>
@@ -39,7 +40,7 @@ const SortBar = (props) => {
                   </DropdownToggle>
                   <DropdownMenu right>
                     <DropdownItem>
-                      Alphabetical
+                      <NavLink className='navLinks'><Link to={'/alpha'} className='nav-link' style={{color: 'black'}}>Alphabetical</Link></NavLink>
                     </DropdownItem>
                     <DropdownItem>
                       By ID
@@ -67,12 +68,15 @@ const SortBar = (props) => {
             </Collapse>
           </Navbar>
 
-          <Switch>
+            <Switch>
                 <Route exact path="/">
                     <Home />
                 </Route>
                 <Route path="/add">
                     <Add />
+                </Route>
+                <Route path="/alpha">
+                    <Alpha />
                 </Route>
             </Switch>
             
