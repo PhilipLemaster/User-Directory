@@ -31,7 +31,7 @@ const SortBar = (props) => {
     <div>
       <HashRouter>
           <Navbar color="dark" dark expand="md">
-            <NavbarBrand href="/">Employee Directory</NavbarBrand>
+            <NavbarBrand><Link to={'/home'} className='nav-link' style={{color: 'white'}}>User Directory</Link></NavbarBrand>
             <NavbarToggler onClick={toggle} />
             <Collapse isOpen={isOpen} navbar>
               <Nav className="mr-auto" navbar>
@@ -73,7 +73,7 @@ const SortBar = (props) => {
           </Navbar>
 
             <Switch>
-                <Route exact path="/">
+                <Route exact path="/home">
                     <Home />
                 </Route>
                 <Route path="/add">
