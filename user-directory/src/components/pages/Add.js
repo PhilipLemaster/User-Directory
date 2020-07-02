@@ -33,16 +33,33 @@ function addEmp(res) {
   let title = document.getElementById('title').value;
   let email = document.getElementById('email').value;
 
-  const emp = {
-    name: fullName,
-    title: title,
-    email: email
+  if (empArray === null || empArray === undefined) {
+    localStorage.setItem("employees", [''])
+    const emp = {
+      name: fullName,
+      title: title,
+      email: email
+    }
+    
+    empArray.push(emp);
+    console.log(empArray);
+    localStorage.setItem("employees", JSON.stringify(empArray));
+    alert("Employee Added!");
   }
   
-  empArray.push(emp);
-  console.log(empArray);
-  localStorage.setItem("employees", JSON.stringify(empArray));
-  alert("Employee Added!");
+  else {
+
+    const emp = {
+      name: fullName,
+      title: title,
+      email: email
+    }
+    
+    empArray.push(emp);
+    console.log(empArray);
+    localStorage.setItem("employees", JSON.stringify(empArray));
+    alert("Employee Added!");
+  }
 }
 
 export default Add;
